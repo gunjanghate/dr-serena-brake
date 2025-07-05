@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   title: "Dr. Serena Blake, PsyD - Licensed Clinical Psychologist in Los Angeles",
   description:
     "Evidence-based therapy with heart. Dr. Serena Blake provides compassionate psychological services for anxiety, relationships, and trauma recovery in Los Angeles, CA.",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

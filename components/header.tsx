@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Phone, Calendar } from "lucide-react"
-
+import Link from "next/link"
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -50,13 +50,17 @@ export default function Header() {
               transition={{ duration: 0.6 }}
               className="flex items-center space-x-3 flex-shrink-0"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-blue-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-medium text-lg font-serif">SB</span>
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-lg font-medium text-slate-800 font-serif">Dr. Serena Blake</h1>
-                <p className="text-xs text-slate-500 font-sans">Clinical Psychologist</p>
-              </div>
+              <Link href="#">
+                <div className="flex items-center space-x-3 flex-shrink-0">
+                  <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <span className="text-white font-medium text-lg font-serif">SB</span>
+                  </div>
+                  <div className="hidden sm:block">
+                    <h1 className="text-lg font-medium text-slate-800 font-serif">Dr. Serena Blake</h1>
+                    <p className="text-xs text-slate-500 font-sans">Clinical Psychologist</p>
+                  </div>
+                </div>
+              </Link>
             </motion.div>
 
             {/* Desktop Navigation - Centered */}
